@@ -1,0 +1,197 @@
+﻿<Page
+    x:Class="CalculatorUWPV2.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    Width="1920"
+    Height="1071"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea">
+
+
+
+        <Border
+            x:Name="AppTitleBar"
+            Grid.RowSpan="2"
+            Height="40"
+            VerticalAlignment="Top"
+            Background="Transparent"
+            Canvas.ZIndex="1"
+            IsHitTestVisible="True">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock
+                    x:Name="AppTitle"
+                    Margin="12,0,0,0"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="Test App Title" />
+            </StackPanel>
+        </Border>
+        <TextBlock
+            x:Name="screencontent"
+            Width="287"
+            Height="101"
+            Margin="20,122,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontFamily="Segoe UI"
+            FontSize="72"
+            TextAlignment="Right"
+            TextWrapping="Wrap" />
+        <Viewbox Height="250" Margin="20,230,1609,0" Stretch="Fill" VerticalAlignment="Top" Width="291">
+            <Grid Height="250" Width="291">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="59*"/>
+                    <ColumnDefinition Width="232*"/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="Delete"
+                    Width="69"
+                    Height="46"
+                    Margin="89,204,0,0"
+                    VerticalAlignment="Top"
+                    Click="Delete_Click"
+                    Content="DEL"
+                    FontFamily="Segoe UI" Grid.Column="1" />
+                <Button
+                    x:Name="Divide"
+                    Width="69"
+                    Height="46"
+                    VerticalAlignment="Top"
+                    Click="devision_Click"
+                    Content="/" Grid.ColumnSpan="2" />
+                <Button
+                    x:Name="Multiply"
+                    Width="69"
+                    Height="46"
+                    Margin="15,0,0,0"
+                    VerticalAlignment="Top"
+                    Click="multipy_Click"
+                    Content="X" Grid.Column="1" />
+
+                <Button
+                    x:Name="Subtract"
+                    Width="69"
+                    Height="46"
+                    Margin="89,0,0,0"
+                    VerticalAlignment="Top"
+                    Click="sub_Click"
+                    Content="-" Grid.Column="1" />
+                <Button
+                    x:Name="Add"
+                    Width="69"
+                    Height="46"
+                    Margin="163,0,0,0"
+                    VerticalAlignment="Top"
+                    Click="add_Click"
+                    Content="+" Grid.Column="1" />
+                <Button
+                    x:Name="_7"
+                    Width="69"
+                    Height="46"
+                    Margin="0,51,0,0"
+                    VerticalAlignment="Top"
+                    Click="_7_Click"
+                    Content="7" Grid.ColumnSpan="2" />
+                <Button
+                    x:Name="_8"
+                    Width="69"
+                    Height="46"
+                    Margin="15,51,0,0"
+                    VerticalAlignment="Top"
+                    Click="_8_Click"
+                    Content="8" Grid.Column="1" />
+                <Button
+                    x:Name="_9"
+                    Width="69"
+                    Height="46"
+                    Margin="89,51,0,0"
+                    VerticalAlignment="Top"
+                    Click="_9_Click"
+                    Content="9" Grid.Column="1" />
+                <Button
+                    x:Name="_4"
+                    Width="69"
+                    Height="46"
+                    Click="_4_Click"
+                    Content="4" Grid.ColumnSpan="2" />
+                <Button
+                    x:Name="_5"
+                    Width="69"
+                    Height="46"
+                    Margin="15,0,0,0"
+                    Click="_5_Click"
+                    Content="5"
+                    FontFamily="Segoe UI" Grid.Column="1" />
+                <Button
+                    x:Name="_6"
+                    Width="69"
+                    Height="46"
+                    Margin="89,0,0,0"
+                    Click="_6_Click"
+                    Content="6" Grid.Column="1" />
+                <Button
+                    x:Name="_1"
+                    Width="69"
+                    Height="46"
+                    Margin="0,153,0,0"
+                    VerticalAlignment="Top"
+                    Click="_1_Click"
+                    Content="1" Grid.ColumnSpan="2" />
+                <Button
+                    x:Name="_2"
+                    Width="69"
+                    Height="46"
+                    Margin="15,153,0,0"
+                    VerticalAlignment="Top"
+                    Click="_2_Click"
+                    Content="2" Grid.Column="1" />
+                <Button
+                    x:Name="_3"
+                    Width="69"
+                    Height="46"
+                    Margin="88,153,0,0"
+                    VerticalAlignment="Top"
+                    Click="_3_Click"
+                    Content="3" Grid.Column="1" />
+                <Button
+                    x:Name="_0"
+                    Width="69"
+                    Height="46"
+                    Margin="0,204,0,0"
+                    VerticalAlignment="Top"
+                    Click="_0_Click"
+                    Content="0" Grid.ColumnSpan="2" />
+                <Button
+                    x:Name="point"
+                    Width="69"
+                    Height="46"
+                    Margin="15,204,0,0"
+                    VerticalAlignment="Top"
+                    Click="point_Click"
+                    Content="." Grid.Column="1" />
+                <Button
+                    x:Name="_Equals"
+                    Width="69"
+                    Height="97"
+                    Margin="162,153,0,0"
+                    VerticalAlignment="Top"
+                    Click="equalsResult_Click"
+                    Content="=" Grid.Column="1" />
+                <Button
+                    x:Name="CLS"
+                    Width="69"
+                    Height="97"
+                    Margin="162,51,0,0"
+                    VerticalAlignment="Top"
+                    Click="CLS_Click"
+                    Content="CLS" Grid.Column="1" />
+
+            </Grid>
+        </Viewbox>
+
+    </Grid>
+</Page>
